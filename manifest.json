@@ -9,14 +9,15 @@
   "theme_color": "#6b8cff",
   "icons": [
     {
-      "src": "assets/images/carlog.jpg",
+      "src": "assets/images/carlog.jpeg",
       "sizes": "192x192",
       "type": "image/jpeg"
     },
     {
-      "src": "assets/images/carlog.jpg",
+      "src": "assets/images/carlog.jpeg",
       "sizes": "512x512",
       "type": "image/jpeg"
     }
   ]
 }
+
