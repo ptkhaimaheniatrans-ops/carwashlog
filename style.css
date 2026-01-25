@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  max-width: 430px;
+  margin-inline: auto;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#bcd6ff,#ffffff,#d9c4ff);
+  color: black;
+}
+
+/* LOADING */
+#loading {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 9999;
+}
+
+/* HEADER */
+.header-title {
+  text-align: center;
+  padding: 16px;
+}
+
+.hidden { display: none; }
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 12px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.6);
+}
+
+.tab.active {
+  background: rgba(255,255,255,0.95);
+}
+
+/* GLASS */
+.tab-content {
+  display: none;
+  margin: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(14px);
+}
+
+.tab-content.active { display: block; }
+
+/* FORM */
+label {
+  font-size: 12px;
+  margin-top: 10px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border-radius: 10px;
+  border: none;
+}
+
+.toggle {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.pay {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.cash { background: #9fffd4; }
+.transfer { background: #a6c9ff; }
+
+.pay.active {
+  outline: 2px solid black;
+}
+
+.submit {
+  margin-top: 16px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: black;
+  color: white;
+}
+
+/* ENTRY */
+.filter-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.date-group {
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+.entry-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.entry-table th,
+.entry-table td {
+  padding: 8px;
+  font-size: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.entry-table th {
+  background: #f1f1f1;
+}
+
+/* POPUP */
+#popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: none;
+  z-index: 999;
+}

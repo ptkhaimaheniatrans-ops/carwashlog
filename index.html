@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Carwash Log</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#c7d9ff">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+  <div id="loading-text"></div>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+
+  <header class="header-title">
+    <h1>Carwash Log</h1>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="form">Submit Form</button>
+    <button class="tab" data-tab="entry">Entry Log</button>
+  </div>
+
+  <!-- SUBMIT FORM -->
+  <section id="form" class="tab-content active">
+    <form id="carwashForm">
+      <input type="hidden" id="timestamp" name="timestamp">
+
+      <label>Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label>Name</label>
+      <input id="name" name="name" list="names" placeholder="choose or type" required>
+      <datalist id="names">
+        <option>Malik</option><option>Johan</option><option>Dudi</option>
+        <option>Iwan</option><option>Teddy</option><option>Kholik</option>
+        <option>Seno</option><option>Cahya</option>
+      </datalist>
+
+      <label>Unit</label>
+      <input id="unit" name="unit" list="units" placeholder="choose or type" required>
+      <datalist id="units">
+        <option>Toyota Avanza DYK</option>
+        <option>Daihatsu Xenia ROK | FAU</option>
+        <option>Honda RBV BZO</option>
+        <option>Veloz DFJ</option>
+        <option>Stargazer</option>
+        <option>Innova Reborn PKA | FAP</option>
+        <option>Innova Zenix 89 WIS</option>
+        <option>Innova Zenix 50 WIS</option>
+        <option>Innova Zenix Hybrid 95 NFJ</option>
+      </datalist>
+
+      <label>Payment</label>
+      <div class="toggle">
+        <button type="button" class="pay cash active" data-pay="Cash">Cash</button>
+        <button type="button" class="pay transfer" data-pay="Transfer">Transfer</button>
+      </div>
+      <input type="hidden" id="payment" name="payment" value="Cash">
+
+      <button type="submit" class="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- ENTRY LOG -->
+  <section id="entry" class="tab-content">
+    <div class="filter-box">
+      <input id="searchInput" placeholder="Search name or unit">
+      <select id="paymentFilter">
+        <option value="">All</option>
+        <option>Cash</option>
+        <option>Transfer</option>
+      </select>
+    </div>
+    <div id="entryTable"></div>
+  </section>
+
+</div>
+
+<div id="popup"></div>
+
+<audio id="click" src="assets/sounds/clicktone.mp3"></audio>
+<audio id="success" src="assets/sounds/successtone.mp3"></audio>
+<audio id="error" src="assets/sounds/errortone.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

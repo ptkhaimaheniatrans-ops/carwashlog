@@ -1,0 +1,22 @@
+{
+  "name": "Carwash Log",
+  "short_name": "CarwashLog",
+  "description": "Carwash attendance & entry log connected to Google Sheets",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef3ff",
+  "theme_color": "#6b8cff",
+  "icons": [
+    {
+      "src": "assets/images/carlog.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/images/carlog.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
